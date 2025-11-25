@@ -25,7 +25,7 @@ def extract_and_save_text(bucket_name, source_key, local_path):
         # Detect file extension
         _, ext = os.path.splitext(source_key.lower())
 
-        print("Extracting text...")
+        print("2. Extracting text...")
         
         full_text = extract_text_from_docx(file_bytes)
 
