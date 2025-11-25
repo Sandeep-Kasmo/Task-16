@@ -16,22 +16,23 @@ Resumes can be uploaded in PDF or DOCX format.
 The pipeline extracts text → cleans → structures → loads into MySQL.
 
 🗂 Project Structure
-  UNSTRUCTURED_DATA_2/
-  │
-  ├── config/
-  │   └── config.ini
-  │
-  ├── src/
-  │   ├── extract.py
-  │   ├── transform.py
-  │   ├── load.py
-  │   ├── main.py
-  │   ├── config_reader.py
-  │   ├── temp_resume_text.txt     # Generated file (ignored by Git)
-  │   └── dataframe.csv            # Generated output
-  │
-  ├── .gitignore
-  └── README.md
+
+      UNSTRUCTURED_DATA_2/
+      │
+      ├── config/
+      │   └── config.ini
+      │
+      ├── src/
+      │   ├── extract.py
+      │   ├── transform.py
+      │   ├── load.py
+      │   ├── main.py
+      │   ├── config_reader.py
+      │   ├── temp_resume_text.txt     # Generated file (ignored by Git)
+      │   └── dataframe.csv            # Generated output
+      │
+      ├── .gitignore
+      └── README.md
 
 ⚙️ Features
 
