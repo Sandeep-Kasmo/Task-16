@@ -6,8 +6,8 @@ SKILL_KEYWORDS=["Python","Java","SQL","HTML","CSS","MERN Stack","React.js","Node
 
 def parse_resume_text(raw_text: str) -> pd.DataFrame:
     if not raw_text:
-        return pd.DataFrame(columns=["Name","Email","Summary","Skills","Experience_List","Education"])
-    parsed_data={"Name":"N/A","Summary":"N/A","Email":"N/A","Skills":"","Experience_List":[],"Education":""}
+        return pd.DataFrame(columns=["Name","Email","Summary","Skills","Experience_List","Education","Certifications"])
+    parsed_data={"Name":"N/A","Summary":"N/A","Email":"N/A","Skills":"","Experience_List":[],"Education":"","Certifications":""}
     name_match=re.search(r"^(.*?)(?=\n)",raw_text,re.MULTILINE)
     if name_match:
         parsed_data["Name"]=name_match.group(0).strip()
@@ -31,4 +31,7 @@ def parse_resume_text(raw_text: str) -> pd.DataFrame:
     edu_block=re.search(r"(EDUCATION|ACADEMICS|QUALIFICATION|EDUCATIONAL BACKGROUND)\s+(.*?)(PROJECTS|SKILLS|INTERNSHIPS|EXPERIENCE|$)",raw_text,re.DOTALL|re.IGNORECASE)
     if edu_block:
         parsed_data["Education"]=re.sub(r"\s+"," ",edu_block.group(2).strip())
+    cert_block=re.search(r"(CERTIFICATIONS|CERTIFICATES|LICENSES)\s*(?:[:\-])?\s*(.*?)(?=\n(?:PROJECTS|EDUCATION|SKILLS|INTERNSHIPS|$))",raw_text,re.DOTALL|re.IGNORECASE)
+    if cert_block:
+        parsed_data["Certifications"]=re.sub(r"\s+"," ",cert_block.group(2).strip())
     return pd.DataFrame([parsed_data])
