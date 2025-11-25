@@ -1,0 +1,46 @@
+# -----------------------------
+# Python ignores
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+
+# Jupyter and cache
+.ipynb_checkpoints/
+.cache/
+
+# -----------------------------
+# Project-specific generated files
+# -----------------------------
+src/temp_resume_text.txt
+src/dataframe.csv
+*.csv
+*.txt
+
+# -----------------------------
+# AWS / MySQL config (DO NOT COMMIT)
+# -----------------------------
+config/config.ini
+
+# -----------------------------
+# IDEs & Editors
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -----------------------------
+# OS files
+# -----------------------------
+.DS_Store
+Thumbs.db
