@@ -44,3 +44,6 @@ config/config.ini
 # -----------------------------
 .DS_Store
 Thumbs.db
+venv/
+logs/
+*.log
