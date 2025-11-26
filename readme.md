@@ -56,10 +56,10 @@ Field	Description
         Email	                  Regex-based
         Summary	                  Objective / Summary section
         Skills	                  Detected from predefined skill keywords
-        Experience_List	           Extracted from INTERNSHIPS / numbered blocks
-        Education	                Academic details
-        Certifications	           Certificates / Licenses section
-        Projects	                Academic or personal projects
+        Experience_List	          Extracted from INTERNSHIPS / numbered blocks
+        Education	              Academic details
+        Certifications	          Certificates / Licenses section
+        Projects	              Academic or personal projects
         Others	                  Everything not matching above sections
 
 Output → Clean DataFrame with 1 row per resume.
